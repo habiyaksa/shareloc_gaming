@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 27, 2025 at 01:42 PM
+-- Generation Time: Oct 30, 2025 at 02:46 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -49,6 +49,28 @@ CREATE TABLE `membership` (
   `tanggal_daftar` datetime DEFAULT current_timestamp(),
   `kode_member` varchar(10) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `pelanggan`
+--
+
+CREATE TABLE `pelanggan` (
+  `id` int(11) NOT NULL,
+  `nama` varchar(255) DEFAULT NULL,
+  `review` text DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `pelanggan`
+--
+
+INSERT INTO `pelanggan` (`id`, `nama`, `review`) VALUES
+(1, 'naifa', 'memuaskan'),
+(2, 'naifa', 'memuaskan'),
+(3, 'naifa', 'memuaskan'),
+(4, 'naifa', 'memuaskan');
 
 -- --------------------------------------------------------
 
@@ -101,6 +123,12 @@ ALTER TABLE `membership`
   ADD UNIQUE KEY `kode_member` (`kode_member`);
 
 --
+-- Indexes for table `pelanggan`
+--
+ALTER TABLE `pelanggan`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `ps`
 --
 ALTER TABLE `ps`
@@ -129,6 +157,12 @@ ALTER TABLE `admin`
 --
 ALTER TABLE `membership`
   MODIFY `id_member` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `pelanggan`
+--
+ALTER TABLE `pelanggan`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `ps`
