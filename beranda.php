@@ -2,14 +2,14 @@
 <?php include 'includes/header.php'; ?>
   <!-- Main Content -->
   <main class="flex-grow py-16 bg-gray-950">
-<section class=" flex justify-center items-center h-screen w-full bg-[url('asset/img/posterekstra.png')] bg-cover bg-center bg-[#27374D]/60 bg-blend-multiply">
+<section class=" flex justify-center items-center h-screen w-full bg-[url('assets/img/bghero.png')] bg-cover bg-center bg-[#27374D]/60 bg-blend-multiply">
   <div class="text-center">
-    <h1 class="text-2xl md:text-7xl font-extrabold text-white drop-shadow-lg">
+    <h1 class="text-2xl md:text-7xl font-extrabold text-white drop-shadow-lg animate__animated animate__fadeInDown">
       Shareloc <span class="text-red-700">PlayStation</span>
     </h1>
     <p class="mt-4 text-lg md:text-2xl text-gray-200 " id="typing">
-      Sewa PS3 & PS 4 Terbaik di kota Tulungagung
-    </p>
+        Sewa PS3 & PS 4 Terbaik di kota Tulungagung
+      </p>
   </div>
 </section>
 
@@ -49,7 +49,7 @@
     </div>
 
     <div class="mt-6 mr-40 m">
-      <ul class="space-y-2 md:text-left text-2xl">
+      <ul class="space-y-5 md:text-left text-2xl">
         <li><i class="fa-solid fa-mosque text-3xl mr-3"></i > mushola</li>
         <li><i class="fa-solid fa-wifi text-3xl mr-3"></i> Free Wifi</li>
         <li><i class="fa-solid fa-toilet text-3xl mr-5"></i> Toilet</li>
@@ -60,12 +60,10 @@
   </div>
 </section>
 
-
-
 <section id="review" class="bg-[#010f40]">
   <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 1440 320"><path fill="#black" fill-opacity="1" d="M0,160L1440,128L1440,0L0,0Z"></path></svg>
   <div class="container mx-auto px-4 pb-10">
-    <h2 class="text-4xl md:text-5xl font-extrabold text-center text-blue-600 mb-8">Review Pelanggan</h2>
+    <h2 class="text-4xl md:text-5xl font-extrabold text-center text-blue-600 mb-8">Review <span class="text-white">Pelanggan</span></h2>
     
     <div class="overflow-hidden pause-on-hover p-8">
       <div class="flex gap-6 animate-marquee">
@@ -96,5 +94,24 @@
   </main>
 <?php include 'includes/footer.php'; ?>
   <script src="assets/js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      spaceBetween: 30,
+      centeredSlides: true,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  </script>
 </body>
 </html>
