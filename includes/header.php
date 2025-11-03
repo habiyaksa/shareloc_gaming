@@ -45,11 +45,11 @@
       <!-- Navbar -->
       <nav id="nav-menu" class="hidden lg:flex lg:space-x-4 text-lg">
         <ul class="lg:space-x-4 lg:flex text-lg">
-        <li><a href="#" class="hover:text-blue-400 transition-colors">Beranda</a></li>
-        <li><a href="#" class="hover:text-blue-400 transition-colors">Daftar Member</a></li>
-        <li><a href="#" class="hover:text-blue-400 transition-colors">Sewa Playbox</a></li>
-        <li><a href="#" class="hover:text-blue-400 transition-colors">lokasi</a></li>
-        <li><a href="#" class="hover:text-blue-400 transition-colors">Kontak</a></li>
+        <li><a href="index.php" class="hover:text-blue-400 transition-colors">Beranda</a></li>
+        <li><a href="form_member.php" class="hover:text-blue-400 transition-colors">Daftar Member</a></li>
+        <li><a href="sewa_ps.php" class="hover:text-blue-400 transition-colors">Sewa Playbox</a></li>
+        <li><a href="#lokasi" class="hover:text-blue-400 transition-colors">lokasi</a></li>
+        <li><a href="#contact" class="hover:text-blue-400 transition-colors">Kontak</a></li>
         </ul>
       </nav>
     </div>
