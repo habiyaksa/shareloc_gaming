@@ -1,0 +1,28 @@
+# File sensitif
+.env
+config.php
+
+# Abaikan file mailer
+/includes/mailer.php
+
+# Folder dependency composer
+/vendor/
+
+# Cache dan backup
+*.log
+*.bak
+*.tmp
+
+# Folder editor / IDE
+.vscode/
+.idea/
+    
+# Sistem file (otomatis dari OS)
+.DS_Store
+Thumbs.db
+
+# Composer dan environment
+composer.lock
+
+# Abaikan file .htaccess (perhatikan titik di depannya)
+.htaccess

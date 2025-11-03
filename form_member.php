@@ -1,45 +1,4 @@
-
-<?php 
-include 'includes/header.php'; 
-include 'koneksi.php';
-
-if (isset($_POST['btndaftar'])) {
-    $nama_lengkap = $_POST['nama_lengkap'];
-    $email = $_POST['email'];
-    $no_hp = $_POST['no_hp'];
-    $alamat = $_POST['alamat'];
-    $tanggal_daftar = $_POST['tanggal_daftar'];
-
-    $result = $conn->query("SELECT kode_member FROM membership ORDER BY id_member DESC LIMIT 1");
-if ($result->num_rows > 0) {
-    $row = $result->fetch_assoc();
-    $last_code = $row['kode_member'];
-    $num = (int) substr($last_code, 3) + 1;
-    $kode_member = "MBR" . str_pad($num, 3, "0", STR_PAD_LEFT);
-} else {
-    $kode_member = "MBR001";
-}
-
-// === Simpan ke database ===
-$sql = "INSERT INTO membership (nama_lengkap, email, no_hp, alamat, tanggal_daftar, kode_member)
-        VALUES ('$nama_lengkap', '$email', '$no_hp', '$alamat', '$tanggal_daftar', '$kode_member')";
-
-if ($conn->query($sql) === TRUE) {
-    echo "
-    <script>
-        alert('Member berhasil ditambahkan dengan kode: $kode_member');
-        window.location.href='form_member.php';
-    </script>
-    ";
-} else {
-    echo "Error: " . $sql . "<br>" . $conn->error;
-}
-
-$conn->close();
-}
-
-
-?>
+<?php include 'includes/header.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -57,7 +16,7 @@ $conn->close();
             <div class="mt-7 flex flex-col items-center">
                 <div class="w-full flex-1 mt-8">
 
-                    <form action="" method="POST" class="mx-auto max-w-xs">
+                    <form action="proses_form_member.php" method="POST" class="mx-auto max-w-xs">
                         <div class="text-white">
                         <span>Nama Lengkap</span>
                         <input
@@ -110,7 +69,7 @@ $conn->close();
             </div>
         </div>
         <div 
-            class="hidden lg:flex relative w-1/2 bg-cover bg-center rounded-lg w-[700px]" 
+            class="hidden lg:flex relative w-1/2 bg-cover bg-center rounded-lg " 
             style="background-image: url('assets/img/gameps3.jpg');;"
             >
             <!-- Shadow di sisi kiri -->
